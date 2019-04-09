@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Películas</title>
+        <meta charset="UTF-8"/>
+        <script>
+                addEventListener('load',inicio,false);
+                function inicio()
+                {
+                  document.getElementById('valoracion').addEventListener('change',cambioTemperatura,false);
+                }
+              
+                function cambioTemperatura()
+                {    
+                  document.getElementById('val').innerHTML=document.getElementById('valoracion').value;
+                }
+              </script>
+    </head>
+    <body>
+        <header>
+                <h1>Formulario de Películas</h1>
+        </header>
+        <form action="miAccion">
+
+            <label for="titulo">Titulo: </label> 
+            <input name="titulo" type="text" placeholder="Título de la Película" required/><br>
+
+            <label for="director">Director: </label>
+            <input name="director" type="text" placeholder="Director de la Película" required/><br>
+
+            <label for="codigo">Código: </label>
+            <input name="codigo" type="text" placeholder="Ej: XXX-11111-XX" required pattern="^([A-Z]{3})-([0-9]{5})-([a-zA-Z]{2})$"/><br>
+
+            <label for="genero">Género: </label>
+            <select name="genero">
+                    <option value="terror">Terror</option>
+                    <option value="accion">Acción</option>
+                    <option value="drama">Drama</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="suspenso">Suspenso</option>
+                </select><br>
+            
+            <label for="fechaEstreno">Fecha de Estreno: </label>
+            <input name="fechaEstreno" type="date"/><br>
+
+            <label for="valoracion">Valoración: </label>
+            <input id="valoracion" name="valoracion" type="range" min="0" max="10"/><span id="val">5</span>
+            <br><br>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <br><br><br><br>
+        <table>
+            <tr>
+                <th>Titulo</th>
+                <th>Director</th>
+                <th>Código</th>
+                <th>Género</th>
+                <th>Fecha de Estreno</th>
+                <th>Valoración</th>
+            </tr>
+            <tr>
+                <td>Glass</td>
+                <td>M. Night Shyamalan</td>
+                <td>ABC-12345-DE</td>
+                <td>Acción</td>
+                 <td>19-02-2019</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Avengers: Endgame</td>
+                <td>Anthony y Joe Russo</td>
+                <td>AAA-55555-GG</td>
+                <td>Acción</td>
+                <td>26-04-2019</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Casablanca</td>
+                <td>Michael Curtiz</td>
+                <td>GGG-44444-RR</td>
+                <td>Drama</td>
+                <td>01-11-1942</td>
+                <td>8</td>
+            </tr>
+        </table>
+    </body>
+</html>
