@@ -1,0 +1,34 @@
+[
+{
+    "codigo":"ABC-12345-DE",
+    "titulo":"Glass",
+    "director":"M. Night Shyamalan",
+    "genero":"Acción",
+    "fechaEstreno":"2019-02-19",
+    "valoracion":"7"
+},
+{
+    "codigo":"AAA-55555-GG",
+    "titulo":"Avengers: Endgame",
+    "director":"Anthony y Joe Russo",
+    "genero":"Ficción",
+    "fechaEstreno":"2019-04-26",
+    "valoracion":"9"
+},
+{
+    "codigo":"GGG-44444-RR",
+    "titulo":"Casablanca",
+    "director":"Michael Curtiz",
+    "genero":"Drama",
+    "fechaEstreno":"1942-11-01",
+    "valoracion":"8"
+},
+{
+    "codigo":"RRR-55555-RR",
+    "titulo":"Rapido y Furioso",
+    "director":"Rob Cohen",
+    "genero":"Acción",
+    "fechaEstreno":"2001-06-22",
+    "valoracion":"10"
+}
+]

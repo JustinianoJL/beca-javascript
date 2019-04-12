@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Películas</title>
+        <meta charset="UTF-8"/>
+        <script type="text/javascript" src="js/ejercicio01HTML.js"></script>
+    </head>
+    <body>
+        <header>
+                <h1>Formulario de Películas</h1>
+        </header>
+        <section>
+            <form id="formularioPeliculas">
+                <label for="titulo">Titulo: </label> 
+                <input id="titulo" name="titulo" type="text" placeholder="Título de la Película" required/><br>
+
+                <label for="director">Director: </label>
+                <input id="director" name="director" type="text" placeholder="Director de la Película" required/><br>
+
+                <label for="codigo">Código: </label>
+                <input id="codigo" name="codigo" type="text" placeholder="Ej: XXX-11111-XX" required pattern="^([A-Z]{3})-([0-9]{5})-([a-zA-Z]{2})$"/><br>
+
+                <label for="genero">Género: </label>
+                <select  id="genero" name="genero">
+                        <option name="terror" value="terror">Terror</option>
+                        <option name="accion" value="accion">Acción</option>
+                        <option name="ficcion" value="ficcion">Ficción</option>
+                        <option name="drama" value="drama">Drama</option>
+                        <option name="comedia" value="comedia">Comedia</option>
+                        <option name="suspenso" value="suspenso">Suspenso</option>
+                    </select><span id="gen">EJEMPLO</span><br>
+                
+                <label for="fechaEstreno">Fecha de Estreno: </label>
+                <input id="fechaEstreno" name="fechaEstreno" type="date" data-date="" data-date-format="yyyy-MM-dd"/><br>
+
+                <label for="valoracion">Valoración: </label>
+                <input id="valoracion" name="valoracion" type="range" min="0" max="10"/><span id="val">5</span>
+                <br><br>
+                <!--<input type="button" onclick="guardarPelicula()">Guardar Película</input>
+                Fuciona de ambas maneras: colocando un imput tipo boton dentro del formulario
+                o un button fuera del formulario haciendo llamado a la misma función-->
+            </form>
+            <button id="guardar" onclick="guardarPelicula()">Guardar Nueva Película</button>
+            <button id="actualizar" onclick="actualizarPelicula()" hidden>Actualizar</button>
+            <button id="cancelar" onclick="cancelarActualizarPelicula()" hidden>Cancelar</button>
+        </section>
+        <br><br>
+        <aside>
+            <table id="tablaPeliculas">
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Director</th>
+                        <th>Código</th>
+                        <th>Género</th>
+                        <th>Fecha de Estreno</th>
+                        <th>Valoración</th>
+                        <th>Gestionar</th>
+                    </tr>
+                    <tr>
+                        <td>Glass</td>
+                        <td>M. Night Shyamalan</td>
+                        <td>ABC-12345-DE</td>
+                        <td>Acción</td>
+                        <td>2019-02-19</td>
+                        <td>7</td>
+                        <td><button id="botonModificar" onclick="modificarPelicula(this)">Modificar</button><button id="botonEliminar" onclick="eliminarPelicula(this)">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Avengers: Endgame</td>
+                        <td>Anthony y Joe Russo</td>
+                        <td>AAA-55555-GG</td>
+                        <td>Ficción</td>
+                        <td>2019-04-26</td>
+                        <td>9</td>
+                        <td><button id="botonModificar" onclick="modificarPelicula(this)">Modificar</button><button id="botonEliminar" onclick="eliminarPelicula(this)">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Casablanca</td>
+                        <td>Michael Curtiz</td>
+                        <td>GGG-44444-RR</td>
+                        <td>Drama</td>
+                        <td>1942-11-01</td>
+                        <td>8</td>
+                        <td><button id="botonModificar" onclick="modificarPelicula(this)">Modificar</button><button id="botonEliminar" onclick="eliminarPelicula(this)">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rapido y Furioso</td>
+                        <td>Rob Cohen</td>
+                        <td>RRR-55555-RR</td>
+                        <td>Acción</to>
+                        <td>2001-06-22</td>
+                        <td>10</td>
+                        <td><button id="botonModificar" onclick="modificarPelicula(this)">Modificar</button><button id="botonEliminar" onclick="eliminarPelicula(this)">Eliminar</button></td>
+                    </tr>
+            </table>
+        </aside>
+    </body>
+</html>
